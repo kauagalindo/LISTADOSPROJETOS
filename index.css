@@ -9,6 +9,10 @@
     box-sizing: border-box;
 }
 
+:root {
+  text-decoration: none;
+}
+
 body 
 {
     min-height: 100vh;
@@ -17,11 +21,8 @@ body
     justify-content: center;
     align-items: center;
     background: rgb(0, 0, 0);
+    text-decoration: none;
 }
-
-
-
-
 
 ul.wrapper_lista {
     display: flex;
@@ -37,7 +38,7 @@ a span {
     display: table-cell; 
     font-size: 8em;
     text-decoration: none;
-    color: #111;
+    color: #000000;
     margin: 0;
     padding: 0;
     animation: animate 2s linear infinite;
@@ -84,6 +85,61 @@ a span:nth-child(8) {
     }
     5%,95%
     {
+        color: #ffffff;
+        filter: blur(0px);
+        text-shadow: 0 0 10px none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    ul.wrapper_lista {
+        gap: 5em; /* Adjust the gap for tablet screens */
+    }
+
+    a span {
+        font-size: 4em; /* Adjust the font size for tablet screens */
+    }
+}
+
+a span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+a span:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+a span:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+a span:nth-child(4) {
+    animation-delay: 0.75s;
+}
+
+a span:nth-child(5) {
+    animation-delay: 1s;
+}
+
+a span:nth-child(6) {
+    animation-delay: 1.25s;
+}
+
+a span:nth-child(7) {
+    animation-delay: 1.50s;
+}
+
+a span:nth-child(8) {
+    animation-delay: 1.75s;
+}
+
+@keyframes animate {
+    0%, 100% {
+        color: #02f7ff;
+        filter: blur(8px);
+        text-shadow: 0 0 10px aqua, 0 0 20px aqua, 0 0 40px aqua, 0 0 80px aqua, 0 0 120px aqua, 0 0 200px aqua, 0 0 300px aqua, 0 0 400px aqua;
+    }
+    5%, 95% {
         color: #ffffff;
         filter: blur(0px);
         text-shadow: 0 0 10px none;
